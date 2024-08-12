@@ -1,0 +1,9 @@
+# Ignore macOS hidden files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Ignore games in development 
