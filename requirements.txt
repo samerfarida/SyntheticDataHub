@@ -1,0 +1,5 @@
+pandas
+python-docx
+fpdf
+faker
+openpyxl
