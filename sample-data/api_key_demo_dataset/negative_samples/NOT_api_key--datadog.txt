@@ -1,0 +1,1 @@
+<dl><dt>${keyword}</dt><dd>${description}</dd></dl><img src="http://upload.wikimedia.org/math/0/c/b/0cb40a68f97d8790e8ffed3527adb639.png" />

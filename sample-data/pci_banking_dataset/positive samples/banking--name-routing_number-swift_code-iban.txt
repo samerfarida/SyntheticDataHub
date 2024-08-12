@@ -1,0 +1,28 @@
+///// Message with a US Routing Number
+
+Bank: Please wire $1506.67 to her account on Monday.
+
+Her account information is:
+Name Briana Smith
+Bank Routing Number: 122105155
+Account Number: 1800001019874
+
+
+///// Message with a Swift Code
+
+Please wire $1506.67 to her account on Monday.
+
+Her account information is:
+Name: Briana Smith
+Bank: BOFAUS3NXXX
+Account Number: 1800001019874
+
+
+///// Message with a IBAN
+
+Please wire $1506.67 to her account on Monday.
+
+Her account information is:
+Name: Briana Smith
+Bank Account: FR7630006000011234567890189
+

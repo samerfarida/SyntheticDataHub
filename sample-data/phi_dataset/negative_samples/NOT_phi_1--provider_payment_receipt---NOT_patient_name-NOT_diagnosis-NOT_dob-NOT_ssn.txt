@@ -1,0 +1,9 @@
+Receipt of Payment
+
+Provider: Dr James Robinson
+Facility: Greeley Cancer Health Center
+Address: 1234 Apple Dr, Greeley, CO 80631
+
+Total Billings: $5100.23
+Date Paid: 12/09/2023
+Transaction ID: 523-06-7891

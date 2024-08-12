@@ -1,0 +1,8 @@
+#shop #buttonz {
+	width:669px; 
+	height:375px; 
+	background: transparent url(http://gf1.geo.gfsrv.net/cdn31/6d9df44ffadc89257e9485c3bb59da.gif) no-repeat;
+	color:#848484;
+	font-size:11px;
+	line-height:14px;
+}

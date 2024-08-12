@@ -1,0 +1,6 @@
+.dx-datagrid .dx-datagrid-rowsview .dx-virtual-row > td:not(.dx-datagrid-group-space):before {
+display: block;
+  	height: 100%;
+  	content: '';
+  	background-image: url(data:image/png;base64,Ij8+57ApqAAAAUNJREFUeNrs3LENwzAMRUEzi2T/sTSJgowQRAI+pbvehf0KFiZYc84nUVU9AAAAAAAAAHf5/id9+wxLjX8efvl+WQQRBEEEQRBBEEQQBBEEQQAAAAAAAAAAflRuLmaxdSIIggiCIIIgiCAIIgiCIAgAyyUfMBs3BjHUBUEQQRBEEAQRBEEEQRAE6cKyNQAAAAAAAADQQuySw9aXDl6gsAYkCIIIgiCCIIggCCIIgiAIcILkA2Y7xR5HM0MEQRBBEEQQBBEEQQRBEAQBAAAAAAAAAHq78l5WMlsngiCIIAgiCIIIgiCCIAiCALDcrQfMDHUEEQRBBEEQQRAEQQRBEEEAAAAAAAAAALZoecCsqo4NYutEEAQRBEEEQRBBEEQQBEEQAJbresBsGOoIIgiCIIggCCIIggiCIIIAAAAAAAAc5iPAAIcKFwANDofzAAAAAElFTkSuQmCC);
+  	background-repeat: no-repeat repeat;}

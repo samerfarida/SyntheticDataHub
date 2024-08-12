@@ -1,0 +1,1 @@
+{ "_id" : { "$oid" : "5328e6f265f3f4d17089a11d" }, "domain" : "jira.mongodb.org", "banned_by" : null, "media_embed" : {}, "subreddit" : "mongodb"}

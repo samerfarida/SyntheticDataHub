@@ -1,0 +1,10 @@
+{ "@babel/helper-optimise-call-expression": {
+      "version": "7.12.10",
+      "resolved: "https://registry.yarnpkg.com/@babel/helper-optimise-call-expression/-/helper-optimise-call-expression-7.12.10.tgz#94ca4e306ee11a7dd6e9f42823e2ac6b49881e2d"
+	  "integrity: "sha512-4tpbU0SrSTjjt65UMWSrUOPZTsgvPgGG4S8QSTNHacKzpS51IVWGDj0yCwyeZND/i+LSN2g/O63jEXE
+      "dev": true,
+      "requires": {
+        "@babel/types": "^7.12.10"
+      }
+    }
+}

@@ -1,0 +1,63 @@
+
+// Google: Very Likely, Inactive - code example
+def authenticate_with_api_key(quota_project_id: str) -> None:
+    # Initialize the Language Service client and set the API key and the quota project id.
+    client = language_v1.LanguageServiceClient(client_options={"api_key": "AIzaSyBJm7CoylH_zhLfmnLNoWDljBtVesNmSrw",
+                                                               "quota_project_id": quota_project_id})
+    text = "Hello, world!"
+    document = language_v1.Document(
+        content=text, type_=language_v1.Document.Type.PLAIN_TEXT
+    )
+
+    # Make a request to analyze the sentiment of the text.
+    sentiment = client.analyze_sentiment(
+        request={"document": document}
+    ).document_sentiment
+
+
+// Okta: Very Likely, Inactive - assignment example
+var validationParameters = new TokenValidationParameters
+    {
+        token=00GZ3L5BV2M7ZDN4S08qIo754DfQT-q-bGS_i-DYnY,
+        RequireSignedTokens = true,
+        ValidateIssuer = true,
+        ValidIssuer = issuer,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKeys = signingKeys,
+        ValidateLifetime = true,
+        // Allow for some drift in server time
+        // (a lower value is better; we recommend two minutes or less)
+        ClockSkew = TimeSpan.FromMinutes(2),
+        // See additional validation for aud below
+        ValidateAudience = false,
+    };
+
+
+// PayPal: Very Likely, Inactive
+/* DO NOT PUSH TO BITBUCKET - START */
+$_ENV['PAYPAL_CLIENT_ID'] = 'AK7Umjjn1E3vl38pSOKEzt07wEzht2W_yKDSyfhLQqD8OtAPiOvk1ndnmRE61c6sCQTf3SQnwxhKGnaB'
+$_ENV['PAYPAL_CLIENT_SECRET'] = 'EDtrW3DWNc0FpTdjSbk_wic3uSfJbq66FWDo4g0fgkBW4f-E91OZVpdzjwXFFyhZ1xOausdVV6QIzljB'
+/* DO NOT PUSH TO BITBUCKET - END */
+
+
+// Slack: Very Likely, Inactive - json w/ bot token
+{
+    "ok": true,
+    "access_token": xoxb-9250923218-900038345181-4HRXivdE2TfbtXvbqLY0h9Nd",
+    "scope": "identify,bot,commands,incoming-webhook,chat:write:bot",
+    "user_id": "bh186345",
+    "team_name": "big-bots",
+    "team_id": "1234567",
+    "incoming_webhook": {
+        "channel": "#channel-it-will-post-to",
+        "channel_id": "C05002EAE",
+        "configuration_url": "https://workspacename.slack.com/services/BXXXXX",
+        "url": "https://hooks.slack.com/TXXXXX/BXXXXX/XXXXXXXXXX"
+    }
+}
+
+// Azure Key: Very Likely, Inactive - Slack message
+Here are the credentials
+tenantID:3e49a1-b0a7-43bb-b1e9-67dc2db7ad54
+appID:9e95615a-3ef3-4852-bc9c-906ab5306ed3
+secret:m9v8Q~xu6NGdBhCg3bVc75f1H4nJ0NW_eHD3vagQ

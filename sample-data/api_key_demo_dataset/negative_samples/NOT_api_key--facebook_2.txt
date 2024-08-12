@@ -1,0 +1,8 @@
+4376945FEA4E29DB5A31133BBE2EA3A8 /* Frameworks */ = {
+	isa = PBXFrameworksBuildPhase;
+	files = (
+		7C08906E192A9A36007307FB /* SAppDelegate.m in Sources */,
+		7CD8E0AC193B3D5D006F0778 /* SCoreDataStore.m in Sources */,
+		7CD8E0A2193B2234006F0778 /* SCoreService.m in Sources */);
+	runOnlyForDeploymentPostprocessing = 0;
+};
