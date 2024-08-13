@@ -22,7 +22,7 @@ Step 3: Install required packages using requirements.txt
 Step 4: Verify installation  
 `pip list`  
 
-Step 5:
+Step 5: run the scripts to generate data
 `python scriptname.py` 
 
 Step 6: Deactivate the virtual environment when done  
