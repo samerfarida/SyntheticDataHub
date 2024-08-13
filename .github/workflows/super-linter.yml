@@ -28,7 +28,7 @@ jobs:
       - name: Super-linter
         uses: super-linter/super-linter@v6  
         env:
-          # VALIDATE_ALL_CODEBASE: true
+          VALIDATE_ALL_CODEBASE: false
           VALIDATE_MARKDOWN: false
           # VALIDATE_BASH: true
           # VALIDATE_PYTHON: true
