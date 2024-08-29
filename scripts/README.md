@@ -25,8 +25,8 @@ Step 4: Verify installation
 Step 5: Run the scripts to generate 100 records of en-US data as default  
  `python scriptname.py` 
 
-Optionally, you can specify the following arguments to change the locale and number of records
- `python scriptname.py --locale en_AU --records 1000` 
+Optionally, you can specify the following arguments to change the locale and number of records   
+  `python scriptname.py --locale en_AU --records 1000` 
 
 
 Step 6: "Optional" Deactivate the virtual environment when done  
