@@ -35,10 +35,10 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_MARKDOWN: false
           VALIDATE_JSCPD: false
-          PYTHON_BLACK: false
-          PYTHON_PYLINT: false
-          PYTHON_FLAKE8: false
-          PYTHON_ISORT: false
+          VALIDATE_PYTHON_BLACK: false
+          VALIDATE_PYTHON_PYLINT: false
+          VALIDATE_PYTHON_FLAKE8: false
+          VALIDATE_PYTHON_ISORT: false
           # VALIDATE_BASH: true
           # VALIDATE_PYTHON: true
           DEFAULT_BRANCH: "main"
