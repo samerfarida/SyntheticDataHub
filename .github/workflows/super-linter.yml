@@ -68,9 +68,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
 
-      - name: Run all Python scripts in 'scripts' directory
+      - name: Run Python scripts on Linux/macOS
+        if: runner.os != 'Windows'
         run: |
           for script in scripts/*.py; do
             echo "Running $script"
             python "$script"
           done
+        shell: bash
+
+      - name: Run Python scripts on Windows
+        if: runner.os == 'Windows'
+        run: |
+          Get-ChildItem scripts\*.py | ForEach-Object {
+            echo "Running $_"
+            python $_
+          }
+        shell: pwsh
