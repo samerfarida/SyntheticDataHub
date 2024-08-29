@@ -10,7 +10,7 @@ import random
 fake = Faker(['en_US'])
 
 # Configuration
-NUMBER_OF_DOCUMENTS = 10  # Number of documents to generate
+NUMBER_OF_DOCUMENTS = 2  # Number of documents to generate
 OUTPUT_FILE = "US_HR_data1"  # Output file name without extension
 
 # Function to create a fake document
