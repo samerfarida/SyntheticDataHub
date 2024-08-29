@@ -3,3 +3,4 @@ python-docx
 fpdf
 faker
 openpyxl
+argparse

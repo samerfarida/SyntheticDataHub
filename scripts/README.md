@@ -22,8 +22,12 @@ Step 3: Install required packages using requirements.txt
 Step 4: Verify installation  
 `pip list`  
 
-Step 5: Run the scripts to generate data   
+Step 5: Run the scripts to generate 100 records of en-US data as default  
  `python scriptname.py` 
+
+Optionally, you can specify the following arguments to change the locale and number of records
+ `python scriptname.py --locale en_AU --records 1000` 
+
 
 Step 6: "Optional" Deactivate the virtual environment when done  
 `deactivate` 

@@ -73,7 +73,7 @@ jobs:
         run: |
           for script in scripts/*.py; do
             echo "Running $script"
-            python "$script"
+            python "$script" --records 5
           done
         shell: bash
 
@@ -82,6 +82,6 @@ jobs:
         run: |
           Get-ChildItem scripts\*.py | ForEach-Object {
             echo "Running $_"
-            python $_
+            python $_ --records 5
           }
         shell: pwsh

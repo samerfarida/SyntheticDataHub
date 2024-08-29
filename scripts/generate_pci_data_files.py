@@ -5,13 +5,30 @@ from docx import Document
 from fpdf import FPDF
 from faker import Faker
 import random
+import argparse
+import string
+
+# Initialize argument parser
+parser = argparse.ArgumentParser(description="Generate arguments")
+
+# Add arguments with default values
+parser.add_argument("--locale", default='en_US', help="Locale for Faker data generation (default: en_US)")
+parser.add_argument("--records", type=int, default=100, help="Number of records to generate (default: 100)")
+
+# Parse arguments
+args = parser.parse_args()
+
+# Use parsed arguments or default values
+LOCAL = args.locale
+NUMBER_OF_RECORDS = args.records
+
+# Generate an 8-character random string
+RANDOM_STRING = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+# Generate output file 
+OUTPUT_FILE = f"{LOCAL}_PCI_data_{NUMBER_OF_RECORDS}_{RANDOM_STRING}"
 
 # Initialize Faker to generate random data
-fake = Faker(['en_US'])
-
-# Configuration
-NUMBER_OF_DOCUMENTS = 10000  # Number of documents to generate
-OUTPUT_FILE = "US_PCI_data1"  # Output file name without extension
+fake = Faker([LOCAL])
 
 # Function to create a fake document
 def create_fake_document():
@@ -85,9 +102,9 @@ def save_documents_to_file(num_docs, filename, file_format='json'):
         raise ValueError("Invalid file format. Please use 'json', 'csv', 'excel', 'word', 'pdf', or 'txt'.")
 
 # Generate and save the documents
-save_documents_to_file(NUMBER_OF_DOCUMENTS, OUTPUT_FILE, file_format='json')  # Save as JSON
-save_documents_to_file(NUMBER_OF_DOCUMENTS, OUTPUT_FILE, file_format='csv')  # Save as CSV
-save_documents_to_file(NUMBER_OF_DOCUMENTS, OUTPUT_FILE, file_format='excel')  # Save as Excel
-save_documents_to_file(NUMBER_OF_DOCUMENTS, OUTPUT_FILE, file_format='word')  # Save as Word
-save_documents_to_file(NUMBER_OF_DOCUMENTS, OUTPUT_FILE, file_format='pdf')  # Save as PDF
-save_documents_to_file(NUMBER_OF_DOCUMENTS, OUTPUT_FILE, file_format='txt')  # Save as Plain
+save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='json')  # Save as JSON
+save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='csv')  # Save as CSV
+save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='excel')  # Save as Excel
+save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='word')  # Save as Word
+save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='pdf')  # Save as PDF
+save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='txt')  # Save as Plain
