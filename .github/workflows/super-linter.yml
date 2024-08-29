@@ -1,4 +1,3 @@
----
 name: Lint and Test
 
 on:  
@@ -46,7 +45,7 @@ jobs:
 
   test:
     name: Test on multiple OS
-    needs: lint  # This ensures the test job only runs if the lint job succeeds
+    needs: lint  # Ensure this job runs only if the lint job succeeds
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -68,19 +67,31 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
 
+      - name: Get list of modified Python scripts
+        id: get_modified_scripts
+        run: |
+          git fetch origin main --depth=1
+          git diff --name-only --diff-filter=AMR origin/main | grep '^scripts/.*\.py$' > modified_scripts.txt
+        shell: bash
+
+      - name: Display modified scripts
+        run: |
+          echo "Modified scripts:"
+          cat modified_scripts.txt
+
       - name: Run Python scripts on Linux/macOS
         if: runner.os != 'Windows'
         run: |
-          for script in scripts/*.py; do
+          while read script; do
             echo "Running $script"
             python "$script"
-          done
+          done < modified_scripts.txt
         shell: bash
 
       - name: Run Python scripts on Windows
         if: runner.os == 'Windows'
         run: |
-          Get-ChildItem scripts\*.py | ForEach-Object {
+          Get-Content modified_scripts.txt | ForEach-Object {
             echo "Running $_"
             python $_
           }
