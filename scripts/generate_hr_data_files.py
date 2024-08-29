@@ -6,7 +6,7 @@ from fpdf import FPDF
 from faker import Faker
 import random
 
-# Initialize Faker to generate random data
+# Initialize Faker to generate random data e.g. 'en_AU'
 fake = Faker(['en_US'])
 
 # Configuration
