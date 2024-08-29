@@ -6,8 +6,8 @@ from fpdf import FPDF
 from faker import Faker
 import random
 
-# Initialize Faker to generate random data
-fake = Faker(['en_US'])
+# Initialize Faker to generate random data e.g. 'en_GB'
+fake = Faker(['en_US']) 
 
 # Configuration
 NUMBER_OF_DOCUMENTS = 10000  # Number of documents to generate
