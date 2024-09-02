@@ -1,3 +1,4 @@
+# %%
 import json
 import csv
 import pandas as pd
@@ -9,11 +10,11 @@ import argparse
 import string
 
 # Initialize argument parser
-parser = argparse.ArgumentParser(description="Generate arguments")
+parser = argparse.ArgumentParser(description="Generate IT/Security data")
 
 # Add arguments with default values
 parser.add_argument("--locale", default='en_US', help="Locale for Faker data generation (default: en_US)")
-parser.add_argument("--records", type=int, default=10, help="Number of records to generate (default: 10)")
+parser.add_argument("--records", type=int, default=10, help="Number of records to generate (default: 100)")
 
 # Parse arguments
 args = parser.parse_args()
@@ -24,25 +25,39 @@ NUMBER_OF_RECORDS = args.records
 
 # Generate an 8-character random string
 RANDOM_STRING = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
-# Generate output file 
-OUTPUT_FILE = f"{LOCAL}_PCI_data_{NUMBER_OF_RECORDS}_{RANDOM_STRING}"
+# Generate output file name
+OUTPUT_FILE = f"{LOCAL}_IT_security_data_{NUMBER_OF_RECORDS}_{RANDOM_STRING}"
 
+
+# %%
 # Initialize Faker to generate random data
 fake = Faker([LOCAL])
 
-# Function to create a fake document
+# Function to create a fake IT/Security document
 def create_fake_document():
     return {
-        "name": fake.name(),
+        "user_id": fake.uuid4(),
+        "username": fake.user_name(),
         "email": fake.email(),
-        "address": fake.address(),
-        "phone": fake.phone_number(),
-        "credit_card_num": fake.credit_card_number(card_type=None),
-        "credit_card_exp": fake.credit_card_expire(),
-        "credit_card_security_num": fake.credit_card_security_code()
+        "department": fake.random_element(elements=('IT', 'Finance', 'HR', 'Marketing', 'Sales', 'Legal')),
+        "job_title": fake.random_element(elements=('Security Analyst', 'Network Engineer', 'Software Developer', 'Data Scientist', 'IT Support')),
+        "access_level": fake.random_element(elements=('Low', 'Medium', 'High')),
+        "incident_type": fake.random_element(elements=('Unauthorized Access', 'Data Breach', 'Phishing Attack', 'Malware Infection', 'DDoS Attack')),
+        "severity": fake.random_element(elements=('Low', 'Medium', 'High')),
+        "incident_date": fake.date_time_this_year().strftime("%Y-%m-%d %H:%M:%S"),
+        "incident_status": fake.random_element(elements=('Open', 'In Progress', 'Resolved', 'Closed')),
+        "file_name": f"{fake.word()}.{random.choice(['docx', 'xlsx', 'pdf', 'txt', 'csv'])}",
+        "file_size_kb": random.randint(10, 10000),
+        "file_type": fake.random_element(elements=('Sensitive', 'Confidential', 'Public')),
+        "file_action": fake.random_element(elements=('Accessed', 'Modified', 'Deleted', 'Shared', 'Downloaded')),
+        "ip_address": fake.ipv4_private(),
+        "mac_address": fake.mac_address(),
+        "location": fake.city(),
     }
 
 
+
+# %%
 # Generate and save the documents to a file
 def save_records_to_file(num_docs, filename, file_format='json'):
     documents = [create_fake_document() for _ in range(num_docs)]
@@ -96,10 +111,16 @@ def save_records_to_file(num_docs, filename, file_format='json'):
     else:
         raise ValueError("Invalid file format. Please use 'json', 'csv', 'excel', 'word', 'pdf', or 'txt'.")
 
+
+
+# %%
+
 # Generate and save the documents
 save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='json')  # Save as JSON
 save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='csv')  # Save as CSV
 save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='excel')  # Save as Excel
 save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='word')  # Save as Word
 save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='pdf')  # Save as PDF
-save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='txt')  # Save as Plain
+save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='txt')  # Save as Plain Text
+
+

@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(description="Generate arguments")
 
 # Add arguments with default values
 parser.add_argument("--locale", default='en_US', help="Locale for Faker data generation (default: en_US)")
-parser.add_argument("--records", type=int, default=100, help="Number of records to generate (default: 100)")
+parser.add_argument("--records", type=int, default=10, help="Number of records to generate (default: 10)")
 
 # Parse arguments
 args = parser.parse_args()
@@ -47,7 +47,7 @@ def create_fake_document():
         "department": fake.random_element(elements=('HR', 'Finance', 'Marketing', 'IT', 'Operations')),
         "employee_id": fake.random_number(digits=6),
         "hire_date": fake.date_between(start_date='-5y', end_date='today').strftime("%Y-%m-%d"),
-        "salary": fake.random_int(min=30000, max=100000, step=1000),
+        "salary": fake.random_int(min=30000, max=10000, step=100),
         "work_email": fake.company_email(),
         "work_phone": fake.phone_number(),
         "supervisor": fake.name(),
@@ -55,14 +55,14 @@ def create_fake_document():
         "emergency_contact_phone": fake.phone_number()
     }
 
-# Generate and save the documents to a file
-def save_documents_to_file(num_docs, filename, file_format='json'):
+# Generate and save the records to a file
+def save_records_to_file(num_docs, filename, file_format='json'):
     documents = [create_fake_document() for _ in range(num_docs)]
 
     if file_format == 'json':
         with open(f"{filename}.json", 'w') as outfile:
             json.dump(documents, outfile, indent=4)
-        print(f"Saved {num_docs} documents to {filename}.json")
+        print(f"Saved {num_docs} records to {filename}.json")
 
     elif file_format == 'csv':
         with open(f"{filename}.csv", 'w', newline='') as outfile:
@@ -70,12 +70,12 @@ def save_documents_to_file(num_docs, filename, file_format='json'):
             writer = csv.DictWriter(outfile, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(documents)
-        print(f"Saved {num_docs} documents to {filename}.csv")
+        print(f"Saved {num_docs} records to {filename}.csv")
 
     elif file_format == 'excel':
         df = pd.DataFrame(documents)
         df.to_excel(f"{filename}.xlsx", index=False)
-        print(f"Saved {num_docs} documents to {filename}.xlsx")
+        print(f"Saved {num_docs} records to {filename}.xlsx")
 
     elif file_format == 'word':
         doc = Document()
@@ -84,7 +84,7 @@ def save_documents_to_file(num_docs, filename, file_format='json'):
                 doc.add_paragraph(f"{key}: {value}")
             doc.add_paragraph("\n")
         doc.save(f"{filename}.docx")
-        print(f"Saved {num_docs} documents to {filename}.docx")
+        print(f"Saved {num_docs} records to {filename}.docx")
 
     elif file_format == 'pdf':
         pdf = FPDF()
@@ -95,7 +95,7 @@ def save_documents_to_file(num_docs, filename, file_format='json'):
                 pdf.cell(200, 10, txt=f"{key}: {value}", ln=True)
             pdf.cell(200, 10, txt="\n", ln=True)
         pdf.output(f"{filename}.pdf")
-        print(f"Saved {num_docs} documents to {filename}.pdf")
+        print(f"Saved {num_docs} records to {filename}.pdf")
 
     elif file_format == 'txt':
         with open(f"{filename}.txt", 'w') as outfile:
@@ -103,15 +103,15 @@ def save_documents_to_file(num_docs, filename, file_format='json'):
                 for key, value in document.items():
                     outfile.write(f"{key}: {value}\n")
                 outfile.write("\n")
-        print(f"Saved {num_docs} documents to {filename}.txt")
+        print(f"Saved {num_docs} records to {filename}.txt")
 
     else:
         raise ValueError("Invalid file format. Please use 'json', 'csv', 'excel', 'word', 'pdf', or 'txt'.")
 
 # Generate and save the documents
-save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='json')  # Save as JSON
-save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='csv')  # Save as CSV
-save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='excel')  # Save as Excel
-save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='word')  # Save as Word
-save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='pdf')  # Save as PDF
-save_documents_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='txt')  # Save as Plain
+save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='json')  # Save as JSON
+save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='csv')  # Save as CSV
+save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='excel')  # Save as Excel
+save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='word')  # Save as Word
+save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='pdf')  # Save as PDF
+save_records_to_file(NUMBER_OF_RECORDS, OUTPUT_FILE, file_format='txt')  # Save as Plain
