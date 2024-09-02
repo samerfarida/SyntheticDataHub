@@ -47,7 +47,7 @@ def create_fake_document():
         "department": fake.random_element(elements=('HR', 'Finance', 'Marketing', 'IT', 'Operations')),
         "employee_id": fake.random_number(digits=6),
         "hire_date": fake.date_between(start_date='-5y', end_date='today').strftime("%Y-%m-%d"),
-        "salary": fake.random_int(min=30000, max=10000, step=100),
+        "salary": fake.random_int(min=10000, max=30000, step=100),
         "work_email": fake.company_email(),
         "work_phone": fake.phone_number(),
         "supervisor": fake.name(),
