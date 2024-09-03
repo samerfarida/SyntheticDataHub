@@ -16,7 +16,7 @@ def main():
     parser.add_argument("--locale", default="en_US", help="Locale argument to pass to the scripts.")
     parser.add_argument("--runs", type=int, default=1, help="Number of times to run each script.")
     parser.add_argument("--records", type=int, default=10, help="Maximum number of records to create.")
-    parser.add_argument("--random", action="store_true", help="Use random number of records between 1 and --max if true, else use --max.")    
+    parser.add_argument("--random", action="store_true", help="Use random number of records between 1 and --records if true, else use --records.")    
     args = parser.parse_args()
 
     # Get all .py files in the current directory
