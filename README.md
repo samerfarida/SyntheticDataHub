@@ -1,4 +1,6 @@
 # Synthetic Data Hub
+[![Logo Image](https://github.com/samerfarida/SyntheticDataHub/blob/main/.resources/syntheticdatahub-logo.webp)
+
 [![Lint](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml)
 
 [![Test on Multiple OS](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml)
