@@ -1,7 +1,6 @@
-<h1 style="text-align: center;">Synthetic Data Hub</h1>
-
-<div style="text-align: center;">
-    <img src="https://github.com/samerfarida/SyntheticDataHub/blob/main/.resources/syntheticdatahub-logo.webp" alt="Logo Image" width="200"/>
+<div align="center">
+  <img src="https://github.com/samerfarida/SyntheticDataHub/blob/main/.resources/syntheticdatahub-logo.webp" alt="Logo Image" width="200"/>
+  <h1>Synthetic Data Hub</h1>
 </div>
 
 [![Lint](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml)
