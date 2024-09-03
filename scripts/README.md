@@ -40,10 +40,13 @@ Run the `files_generator.py` script with the following options:
 `python files_generator.py --locale en_US --runs 5 --records 1000 --random`
 
 ### Arguments
-`--locale`: Specifies the locale argument to pass to the scripts.
-`--runs`: Number of times to run each script.
-`--records`: Maximum number of records to create.
-`--random`: Use a random number of records between 1 and --records if specified. If --random is not provided, it will use the value of --records.
+ `--locale` : Specifies the locale argument to pass to the scripts. 
+ 
+ `--runs` : Number of times to run each script. 
+ 
+ `--records` : Maximum number of records to create. 
+ 
+ `--random` : Use a random number of records between 1 and --records if specified. If --random is not provided, it will use the value of --records. 
 
 ### Examples
 
@@ -51,9 +54,11 @@ Run the `files_generator.py` script with the following options:
 
 
 `python files_generator.py --locale en_US --runs 5 --records 1000 --random`
+
 This will run each .py file 5 times, passing --locale en_US and a random number of records between 1 and 1000 to each run.
 
 #### Run with Fixed Records:
 
 `python files_generator.py --locale en_US --runs 5 --records 1000`
+
 This will run each .py file 5 times, passing --locale en_US and --records 1000 to each run.
