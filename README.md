@@ -1,5 +1,7 @@
 # Synthetic Data Hub
-[![Super-Linter](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/super-linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![Lint](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml)
+
+[![Test on Multiple OS](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml)
 
 This repository provides synthetic data collections for testing, validating, and ensuring the effectiveness of Data Loss Prevention (DLP) and Data Security Posture Management (DSPM) solutions. 
 
