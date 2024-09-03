@@ -13,7 +13,6 @@ jobs:
   test:
     name: Test on multiple OS
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    needs: lint  # This ensures the test job only runs if the lint job succeeds
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
