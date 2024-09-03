@@ -10,7 +10,7 @@
 ![Test on Windows](https://img.shields.io/github/actions/workflow/status/samerfarida/SyntheticDataHub/test.yml?branch=main&job=test_windows&label=Windows&logo=windows&style=flat-square)
 ![Test on macOS](https://img.shields.io/github/actions/workflow/status/samerfarida/SyntheticDataHub/test.yml?branch=main&job=test_macos&label=macOS&logo=apple&style=flat-square)
 
-This repository provides synthetic data collections for testing, validating, and ensuring the effectiveness of Data Loss Prevention (DLP) and Data Security Posture Management (DSPM) solutions.
+This repository provides synthetic data collections for testing, validating, and ensuring the effectiveness of Data Loss Prevention (DLP) and Data Security Posture Management (DSPM) solutions and other use cases [wiki](https://en.wikipedia.org/wiki/Synthetic_data).
 
 It includes sample datasets and scripts to generate new data, covering various categories such as Personal Identifiable Information (PII), Human Resources (HR), Payment Card Industry (PCI) compliant data, Protected Health Information (PHI), and others.
 
