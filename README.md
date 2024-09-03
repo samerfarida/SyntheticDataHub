@@ -4,20 +4,7 @@
 </div>
 
 [![Lint](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml)
-
 [![Test on Multiple OS](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml)
-
-### Ubuntu
-
-[![Test on Ubuntu](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml/badge.svg?branch=main&event=push&job=test_ubuntu)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml)
-
-### Windows
-
-[![Test on Windows](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml/badge.svg?branch=main&event=push&job=test_windows)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml)
-
-### macOS
-
-[![Test on macOS](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml/badge.svg?branch=main&event=push&job=test_macos)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml)
 
 This repository provides synthetic data collections for testing, validating, and ensuring the effectiveness of Data Loss Prevention (DLP) and Data Security Posture Management (DSPM) solutions.
 
