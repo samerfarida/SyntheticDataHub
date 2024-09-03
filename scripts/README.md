@@ -1,4 +1,5 @@
 # Synthetic Data Hub
+
 These Python scripts generate new sample data.
 
 ## Creating a Virtual Python Environment
