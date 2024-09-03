@@ -3,6 +3,7 @@
   <h1>Synthetic Data Hub</h1>
 </div>
 
+[![CodeQL Advanced](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/codeql.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/codeql.yml)
 [![Lint](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/lint.yml)
 [![Test on Multiple OS](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml/badge.svg)](https://github.com/samerfarida/SyntheticDataHub/actions/workflows/test.yml)
 ![Test on Ubuntu](https://img.shields.io/github/actions/workflow/status/samerfarida/SyntheticDataHub/test.yml?branch=main&job=test_ubuntuu&label=Ubuntu&logo=ubuntu&style=flat-square)
